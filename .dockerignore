@@ -1,0 +1,10 @@
+.git
+.github
+__pycache__/
+*.pyc
+.pytest_cache/
+test_app.py
+*.csv
+framingham.csv
+movies_metadata.csv
+tfidf.pkl
