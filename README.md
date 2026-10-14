@@ -36,7 +36,7 @@ No need to install Python or project libraries manually—Docker packages everyt
 
 ---
 
-### Option 2: Run Live with Streamlit (Local Python Environment)
+### Option 2: Run Live with Streamlit
 
 🌐 Live Deployments
 
