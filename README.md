@@ -38,45 +38,9 @@ No need to install Python or project libraries manually—Docker packages everyt
 
 ### Option 2: Run Live with Streamlit (Local Python Environment)
 
-Run the Python code directly in your local terminal using Streamlit.
+🌐 Live Deployments
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/<your-username>/movie-recommender-docker-cicd.git
-   cd movie-recommender-docker-cicd
-   ```
-
-2. **Create and activate a virtual environment:**
-   * **Windows (Command Prompt / PowerShell):**
-     ```cmd
-     python -m venv venv
-     .\venv\Scripts\activate
-     ```
-   * **macOS / Linux:**
-     ```bash
-     python3 -m venv venv
-     source venv/bin/activate
-     ```
-
-3. **Install required dependencies:**
-   ```bash
-   pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
-
-4. **Verify your API key:**
-   Make sure `OMDB_API_KEY` in `app.py` has your active OMDb key (e.g., `f6647b87`).
-
-5. **Launch the Streamlit app:**
-   ```bash
-   streamlit run app.py
-   ```
-   *(If your system defaults to the Python launcher: `py -m streamlit run app.py`)*
-
-6. The app will automatically launch in your browser at:
-   ```text
-   http://localhost:8501
-   ```
+* **Streamlit Cloud:** `https://movie-recommender-docker-cicd-k52qpqunmsjfdck9hesnnr.streamlit.app/`
 
 ---
 
@@ -195,15 +159,3 @@ The `.github/workflows/main.yml` pipeline runs automatically on every push to `m
 4. **Docker Packaging:** Logs in to Docker Hub using encrypted repository secrets (`DOCKERHUB_USERNAME`, `DOCKERHUB_TOKEN`) and pushes the latest container image.
 5. **Deployment Trigger:** Calls Render's deploy hook URL to automatically trigger a live redeployment.
 
----
-
-## 🌐 Live Deployments
-
-* **Render (Containerized):** Hosted as a web service via Docker (`--server.port $PORT --server.address 0.0.0.0`).
-* **Streamlit Cloud:** Connected to the GitHub repository for instant serverless execution.
-
----
-
-## 📜 License
-
-Distributed under the MIT License. Feel free to use, modify, and distribute for educational and commercial projects.
