@@ -10,7 +10,7 @@ The project includes unit test validation with PyTest, automated container build
 
 Choose whichever option works best for your setup:
 
-### Option 1:  Run via Docker Hub (Single Command)
+### Option 1:  Run via Docker Desktop (Single Command)
 Run the fully packaged application locally without needing Python or dependency setup:
 
 ```bash
