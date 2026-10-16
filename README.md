@@ -10,29 +10,17 @@ The project includes unit test validation with PyTest, automated container build
 
 Choose whichever option works best for your setup:
 
-### Option 1: Run with Docker Desktop (Containerized)
+### Option 1:  Run via Docker Hub (Single Command)
+Run the fully packaged application locally without needing Python or dependency setup:
 
-No need to install Python or project libraries manually—Docker packages everything into an isolated container.
+```bash
+docker pull sana01206/movie-recommender:latest
+docker run -d -p 8501:8501 --name sana01206/movie-recommender:latest
+```
 
-1. **Make sure Docker Desktop is running** on your computer.
-2. Open your terminal / command prompt.
-3. **Run the container directly from Docker Hub:**
-   ```bash
-   docker run -d -p 8501:8501 --name movie-recommender <your-dockerhub-username>/movie-recommender:latest
-   ```
-   *(Or if you cloned the repository and want to build it locally:)*
-   ```bash
-   docker build -t movie-recommender .
-   docker run -p 8501:8501 movie-recommender
-   ```
-4. Open your browser and go to:
-   ```text
-   http://localhost:8501
-   ```
-5. **To stop the app:**
-   ```bash
-   docker stop movie-recommender
-   ```
+*(Docker will automatically pull the image if it is not found locally).*
+
+Once running, the service is accessible at `http://localhost:8501/`.
 
 ---
 
